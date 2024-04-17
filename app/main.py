@@ -3,8 +3,6 @@ from database.database import initialize_database
 from endpoints.flights import router as flight_router
 from endpoints.reservations import router as reservation_router
 
-print("Hemant")
-
 app = FastAPI()
 
 # Initialize the database
@@ -17,5 +15,4 @@ app.include_router(reservation_router)
 
 if __name__ == "__main__":
     import uvicorn
-    print("Hemant !!!")
     uvicorn.run(app, host="0.0.0.0", port=8000)
